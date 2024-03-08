@@ -1,0 +1,115 @@
+/*-------------------------------GLOBAL------------------------------------*/
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+/*--------------------------------------HERO------------------------------------*/
+
+.container-hero {
+    background: url(img/img-hero3.jpg) no-repeat center;
+    height: 100vh;
+    background-size: cover;
+    color: white;
+    overflow: hidden;
+    /* Empêche le défilement */
+}
+
+.container-hero h1 {
+    margin: 0;
+}
+
+/* Styles pour le curseur */
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 35px;
+    background-color: white;
+    animation: cursorBlink 0.8s infinite;
+    opacity: 0;
+    /* Démarre avec le curseur caché */
+}
+
+/* Animation pour le clignotement du curseur */
+@keyframes cursorBlink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*----------------------------------------- CARDS ------------------------------------*/
+
+.card {
+    width: 190px;
+    height: 254px;
+    transition: all 0.2s;
+    position: relative;
+    cursor: pointer;
+    display: inline-flex;
+}
+
+.card-inner {
+    width: inherit;
+    height: inherit;
+    background: rgba(255, 255, 255, .05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    color: #333;
+}
+
+.card:hover {
+    transform: scale(1.04) rotate(1deg);
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(#b0e633, #53ef7d);
+    border-radius: 50%;
+    position: absolute;
+    animation: move-up6 2s ease-in infinite alternate-reverse;
+}
+
+.circle:nth-child(1) {
+    top: -25px;
+    left: -25px;
+}
+
+.circle:nth-child(2) {
+    bottom: -25px;
+    right: -25px;
+    animation-name: move-down1;
+}
+
+@keyframes move-up6 {
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes move-down1 {
+    to {
+        transform: translateY(10px);
+    }
+}
