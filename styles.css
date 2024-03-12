@@ -9,12 +9,15 @@
 body {
     padding: 0;
     margin: 0;
+    height: 100vh;
 }
 
 .container {
     width: 1440px;
     margin: 0 auto;
 }
+
+
 
 /*--------------------------------------HERO------------------------------------*/
 
@@ -28,7 +31,15 @@ body {
 }
 
 .container-hero h1 {
-    margin: 0;
+    font-size: x-large;
+}
+
+.container-header+p {
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
 }
 
 /* Styles pour le curseur */
@@ -57,16 +68,34 @@ body {
     }
 }
 
+
+/*---------------------------------CONTAINER CONTAINER CARDS----------------------------*/
+
+.container-hero-cards-container {
+    margin-top: 9vh;
+}
+
+
+/* -----------------------------------CONTAINER CARDS -----------------------------*/
+
+.container-hero-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
 /*----------------------------------------- CARDS ------------------------------------*/
 
 .card {
-    width: 190px;
-    height: 254px;
+    width: 200px;
+    height: 264px;
     transition: all 0.2s;
     position: relative;
     cursor: pointer;
     display: inline-flex;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 .card-inner {
@@ -76,12 +105,15 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(10px);
     border-radius: 8px;
-    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card-inner p {
     color: white;
     text-align: center;
+    font-size: x-large;
 }
 
 .card:hover {
@@ -117,5 +149,115 @@ body {
 @keyframes move-down1 {
     to {
         transform: translateY(10px);
+    }
+}
+
+
+
+/* ------------------------------------FOOTER -------------------------------*/
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    padding: 10px 0;
+}
+
+/*--------------------------------ICON SOCIAL MEDIA---------------------------------------------*/
+
+.container-footer {
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.container-footer ul {
+    padding-inline-start: inherit;
+}
+
+
+
+
+.container-icon {
+    display: flex;
+    list-style-type: none;
+    gap: 25px;
+}
+
+.container-icon li a img {
+    transition: transform 0.65s ease-out;
+}
+
+.container-icon li a:hover img {
+    transform: scale(2) rotate(360deg);
+}
+
+/*-------------------------------------------TITLE AND LOGO-----------------------------------*/
+
+
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        display: block;
+        width: auto;
+        margin: 2px;
+    }
+
+    .container-footer {
+        display: flex;
+        width: -webkit-fill-available;
+    }
+
+    .card {
+        width: 170px;
+        height: 264px;
+    }
+
+    .container-header+p {
+        font-size: x-large;
+        padding-top: 14vh;
+    }
+
+    .card-inner+p {
+        font-size: large;
+
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container {
+        padding: 0;
+        margin: 0;
+        width: 378px;
+    }
+
+    .container-header {
+        width: auto;
+    }
+
+    .container-header+p {
+        font-size: large;
+        padding-top: 0vh;
+        padding-bottom: 0vh;
+    }
+
+    .container-hero-cards {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: auto;
+    }
+
+    .card {
+        width: 150px;
+        height: 234px;
+
     }
 }
