@@ -30,9 +30,7 @@ body {
     /* Empêche le défilement */
 }
 
-.home {
-    display: none;
-}
+
 
 .container-hero h1 {
     font-size: x-large;
@@ -99,6 +97,9 @@ body {
     gap: 10px;
 }
 
+.container-hero-cards a {
+    text-decoration: none;
+}
 
 /*----------------------------------------- CARDS ------------------------------------*/
 
@@ -208,6 +209,14 @@ footer {
     transform: scale(2) rotate(360deg);
 }
 
+.container-header img {
+    transition: transform 0.65s ease-out;
+}
+
+.home:hover {
+    transform: scale(2) rotate(360deg);
+}
+
 /*-------------------------------------------TITLE AND LOGO-----------------------------------*/
 
 
@@ -217,6 +226,14 @@ footer {
     justify-content: space-between;
     margin-top: 3px;
 }
+
+
+
+
+/* --------------------------------- MEDIA QUERY 768 PX-------------------------------------------*/
+
+
+
 
 @media screen and (max-width: 768px) {
     .container {
@@ -240,11 +257,15 @@ footer {
         padding-top: 14vh;
     }
 
-    .card-inner+p {
+    .card-inner p {
         font-size: large;
 
     }
+
 }
+
+
+/* --------------------------------- MEDIA QUERY 400 PX-------------------------------------------*/
 
 @media screen and (max-width: 400px) {
 
@@ -280,6 +301,11 @@ footer {
         height: 180px;
     }
 
+    .card-inner p {
+        font-size: medium;
+
+    }
+
     .about-content {
         padding: 0px;
     }
@@ -302,7 +328,33 @@ footer {
     .home {
         display: block;
     }
+
+    .circle {
+        width: 60px;
+        height: 60px;
+        background: radial-gradient(rgba(176, 230, 51, 0.5), rgba(83, 239, 125, 0.5));
+        border-radius: 50%;
+        position: absolute;
+        animation: move-up6 2s ease-in infinite alternate-reverse;
+    }
+
+    .circle:nth-child(1) {
+        top: -25px;
+        left: -25px;
+    }
+
+    .circle:nth-child(2) {
+        bottom: -25px;
+        right: -25px;
+        animation-name: move-down1;
+    }
 }
+
+
+
+/* --------------------------------- MEDIA QUERY 376 PX-------------------------------------------*/
+
+
 
 @media screen and (max-width: 376px) {
     .container-about-content {
@@ -335,4 +387,77 @@ footer {
 .container-about-content a {
     color: #b0e633;
     text-decoration: none;
+}
+
+
+/*----------------------------------------CV----------------------------------*/
+
+
+.cv-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cv-content h5 {
+    margin: 0;
+    padding: 0;
+}
+
+.cv-content h4 {
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+}
+
+.cv-content a {
+    color: #b0e633;
+}
+
+.cv-content p {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.container-cv-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    /* Ajustez la largeur maximale selon vos besoins */
+}
+
+.cv-left,
+.cv-right {
+    flex-basis: 50%;
+    padding-left: 30px;
+    padding-right: 30px;
+    /* Ajoutez un peu de padding pour l'espace entre les colonnes */
+}
+
+.resume-title {
+    color: #b0e633;
+}
+
+.resume-item {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.resume-item h4 {
+    font-style: italic;
+}
+
+.resume-item p {
+    color: #ffffff;
+}
+
+
+.download-cv {
+    position: absolute;
+    top: 50vh;
+    transition: transform 0.65s ease-out;
+}
+
+.download-cv:hover {
+    transform: scale(2) rotate(360deg);
 }
