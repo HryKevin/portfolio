@@ -17,6 +17,30 @@ body {
     margin: 0 auto;
 }
 
+/*------HEADER-----*/
+
+#home-icon {
+    display: none;
+}
+
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #b0e633;
+    font-size: 17px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
 
 
 /*--------------------------------------HERO------------------------------------*/
@@ -48,7 +72,7 @@ body {
 .cursor {
     display: inline-block;
     width: 4px;
-    height: 25px;
+    height: 35px;
     background-color: white;
     animation: cursorBlink 0.8s infinite;
     opacity: 0;
@@ -223,9 +247,9 @@ footer {
 
 .container-header {
     display: flex;
-    justify-content: space-between;
-    margin-top: 3px;
+    justify-content: space-around;
 }
+
 
 
 
@@ -397,6 +421,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: small;
 }
 
 .cv-content h5 {
@@ -504,7 +529,7 @@ footer {
 }
 
 .download-cv:hover img {
-    transform: scale(2) rotate(360deg);
+    transform: scale(1.5);
     /* Animation de l'image au survol */
 }
 
@@ -526,7 +551,7 @@ footer {
 .section-projet-content h1 {
     text-align: center;
     text-transform: uppercase;
-    margin-top: 150px;
+    margin-top: 35px;
 }
 
 
@@ -607,8 +632,7 @@ footer {
 }
 
 .contact-content h1 {
-    padding-top: 10vh;
-
+    padding-top: O;
 }
 
 
