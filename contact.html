@@ -16,43 +16,44 @@
 </head>
 
 <body>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="cv.html">C.V</a></li>
+                    <li><a href="project.html">Projets</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
     <section class="container-hero">
         <div class="container">
             <div class="container-header">
                 <img src="img/hary-high-resolution-logo-transparent.png" height="65px">
                 <img src="icon/icons8-home.svg" class="home">
             </div>
-            <div class="about-content">
-                <h1><span id="typed-text-about" class="typed"></span><span class="cursor"></span>
+            <div class="contact-content">
+                <h1><span id="typed-text-contact" class="typed"></span><span class="cursor"></span>
                 </h1>
                 <br>
-                <div class="container-about-content">
-                    <p>Je suis actuellement immergé dans une formation professionnelle au sein de <a
-                            href="https://www.metz-numeric-school.fr/fr">Metz Numeric
-                            School</a>.</p>
-                    <br>
-                    <p>Où mon objectif principal est d'obtenir mon diplôme de développeur web/web mobile à
-                        la fin de cette année.</p>
-                    <br>
+                <section class="contact-section">
+                    <form class="contact-form" id="contactForm" action="#" method="POST">
+                        <h2 class="text">Contactez-moi</h2>
+                        <label for="nom">Nom :</label>
+                        <input type="text" id="nom" name="nom" required>
 
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required>
 
-                    <p>Après avoir exploré diverses passions et domaines d'activité, j'ai ressenti une véritable
-                        connexion
-                        avec le domaine du développement web pour son potentiel créatif et ses possibilités
-                        d'apprentissage
-                        infinies. </p>
-                    <br>
-                    <p>Cette découverte m'a incité à m'engager pleinement dans cette voie, cherchant à
-                        maîtriser
-                        les compétences techniques et les meilleures pratiques nécessaires pour exceller dans ce
-                        domaine
-                        en
-                        constante évolution.</p>
-                    <br>
-                    <p>La formation à Metz Numeric School représente pour moi bien plus qu'un simple programme
-                        d'études.
-                    </p>
-                </div>
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" required></textarea>
+
+                        <input type="submit" value="Envoyer">
+                    </form>
+                </section>
             </div>
             <footer class="container container-footer">
 
