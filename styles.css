@@ -30,6 +30,10 @@ body {
     /* Empêche le défilement */
 }
 
+.home {
+    display: none;
+}
+
 .container-hero h1 {
     font-size: x-large;
 }
@@ -293,6 +297,10 @@ footer {
 
     .container-hero h1 {
         font-size: large;
+    }
+
+    .home {
+        display: block;
     }
 }
 
