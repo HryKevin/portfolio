@@ -18,7 +18,7 @@
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <nav>
+            <nav class="nav-modal">
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="about.html">À propos</a></li>
@@ -46,15 +46,15 @@
 
                 <section class="contact-section">
                     <form class="contact-form" id="contactForm" action="#" method="POST">
-                        <h2 class="text">Contactez-moi</h2>
+                        <h2 class="text">Contactez - moi !</h2>
                         <label for="nom">Nom :</label>
-                        <input type="text" id="nom" name="nom" required>
+                        <input type="text" id="nom" name="nom" placeholder="Nom :" required>
 
                         <label for="email">Email :</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" placeholder="Email :" required>
 
                         <label for="message">Message :</label>
-                        <textarea id="message" name="message" required></textarea>
+                        <textarea id="message" name="message" placeholder="Votre message ..."></textarea>
 
                         <input type="submit" value="Envoyer">
                     </form>
