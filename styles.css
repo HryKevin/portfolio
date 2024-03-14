@@ -36,12 +36,15 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: #b0e633;
+    color: #FEFEFE;
     font-size: 17px;
     padding: 10px 20px;
     text-transform: uppercase;
 }
 
+nav ul li a:hover {
+    border-bottom: 1px solid #b0e633;
+}
 
 /*--------------------------------------HERO------------------------------------*/
 
@@ -65,7 +68,8 @@ nav ul li a {
     display: flex;
     justify-content: center;
     padding-bottom: 5vh;
-    padding-top: 5vh;
+    padding-top: 15vh;
+
 }
 
 /* Styles pour le curseur */
@@ -107,9 +111,7 @@ nav ul li a {
 
 /*---------------------------------CONTAINER CONTAINER CARDS----------------------------*/
 
-.container-hero-cards-container {
-    margin-top: 9vh;
-}
+
 
 
 /* -----------------------------------CONTAINER CARDS -----------------------------*/
@@ -143,6 +145,7 @@ nav ul li a {
     background: rgba(255, 255, 255, .05);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -286,6 +289,43 @@ footer {
 
     }
 
+    .download-cv {
+        top: 0vh !important;
+        /* Position relative pour que les pseudo-éléments soient positionnés par rapport à cet élément */
+
+        left: 5vh !important;
+        position: relative !important;
+    }
+
+    .download-cv img {
+        height: 70px !important;
+    }
+
+    .section-projet {
+        padding-top: 2vh !important;
+    }
+
+    .section-projet-content h1 {}
+
+
+    .section-projet-content-card-group {
+        padding: 0 !important;
+
+    }
+
+    .section-projet-content-card {
+        flex: 0 0 18.75rem;
+        display: flex;
+        flex-direction: column;
+        height: 20.75rem;
+        padding: 2rem;
+        transition: transform 250ms;
+        background-color: rgba(0, 0, 0, 0.9);
+        border-radius: 0.625rem;
+        box-shadow: 0 0.3125rem 1.25rem rgba(0, 0, 0, 0.1);
+        text-align: center;
+        align-items: center;
+    }
 }
 
 
@@ -309,8 +349,7 @@ footer {
 
     .container-header+p {
         font-size: large;
-        padding-top: 0vh;
-        padding-bottom: 0vh;
+        padding-top: 9vh;
         margin: auto;
     }
 
@@ -318,6 +357,7 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
         width: auto;
+        padding-top: 2vh;
     }
 
     .card {
@@ -335,9 +375,9 @@ footer {
     }
 
     .container-about-content {
-        margin: 0px;
-        padding: 0px;
-        font-size: smaller;
+        margin: 0px !important;
+        padding: 0px !important;
+        font-size: smaller !important;
     }
 
     .container-about-content h1 {
@@ -372,6 +412,111 @@ footer {
         right: -25px;
         animation-name: move-down1;
     }
+
+
+    #home-icon {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+    }
+
+
+    .about-content {
+        padding-top: 0 !important;
+    }
+
+    .container-about-content {
+        padding-top: 5vh !important;
+    }
+
+    .cv-content {
+        padding-top: 0vh !important;
+    }
+
+    .container-cv-content {
+        display: block !important;
+        justify-content: space-between;
+        max-width: 900px;
+        /* Ajustez la largeur maximale selon vos besoins */
+        font-size: small;
+    }
+
+    .container-hero {
+        overflow: scroll;
+    }
+
+    footer {
+        position: relative;
+    }
+
+    .download-cv {
+        align-items: center;
+        position: relative !important;
+    }
+
+    .download-cv img {
+        height: 35px !important;
+    }
+
+    .download-cv::after {
+        font-size: x-small;
+    }
+
+    .section-projet {
+        padding-top: 0vh !important;
+    }
+
+    .section-projet-content h1 {
+        margin-top: 10px !important;
+    }
+
+    .section-projet-content-card-group {
+        display: block !important;
+    }
+
+    .section-projet-content-card:not(:first-child) {
+        margin-left: 0 !important;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+
+    .section-projet-content-card:hover {
+        transform: translate(0) rotate(0deg) !important;
+    }
+
+    .section-projet-content-card:hover~.section-projet-content-card {
+        transform: translateX(0) !important;
+    }
+
+    .section-projet-content-card h3 {
+        color: #b0e633;
+    }
+
+    .section-projet-content-card p {
+        color: #FEFEFE;
+    }
+
+    .section-projet-content-card img {
+        margin: auto;
+        border-radius: 5px;
+
+    }
+
+    .section-projet-content-card a {
+        color: #b0e633;
+        text-decoration: none;
+        padding: auto;
+
+    }
+
+    .contact-section {
+        padding-top: 8vh !important;
+        padding-bottom: 10vh !important;
+    }
+
+
 }
 
 
@@ -381,10 +526,31 @@ footer {
 
 
 @media screen and (max-width: 376px) {
+    .about-content h1 {
+        margin-bottom: 0vh !important;
+        ;
+    }
+
+
     .container-about-content {
         margin: 0px;
-        padding: 0px;
-        font-size: xx-small;
+        padding: 0px !important;
+        font-size: small !important;
+    }
+
+    .container-header+p {
+        font-size: large;
+        padding-top: 0vh !important;
+        margin: auto;
+    }
+
+    .container-about-content {
+        padding-top: 0vh !important;
+    }
+
+    .contact-section {
+        padding-top: 2vh !important;
+        padding-bottom: 0vh !important;
     }
 }
 
@@ -396,6 +562,8 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 10px;
+    padding-top: 8vh;
+
 }
 
 .container-about-content {
@@ -406,6 +574,7 @@ footer {
     display: flex;
     flex-direction: column;
     text-align: center;
+    font-size: larger;
 }
 
 .container-about-content a {
@@ -421,7 +590,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: small;
+    padding-top: 2vh;
 }
 
 .cv-content h5 {
@@ -460,11 +629,11 @@ footer {
 }
 
 .cv-left h3:first-child {
-    margin-top: 0;
+    margin-top: 2vh;
 }
 
 .cv-right h3:first-child {
-    margin-top: 0;
+    margin-top: 2vh;
 }
 
 .resume-title {
@@ -542,6 +711,7 @@ footer {
     display: flex;
     width: 80%;
     margin: 0 auto;
+    padding-top: 15vh;
 }
 
 .section-projet-content {
@@ -550,7 +720,6 @@ footer {
 
 .section-projet-content h1 {
     text-align: center;
-    text-transform: uppercase;
     margin-top: 35px;
 }
 
@@ -608,6 +777,9 @@ footer {
 
 .section-projet-content-card a {
     color: #b0e633;
+    text-decoration: none;
+    padding: auto;
+
 }
 
 
@@ -619,7 +791,7 @@ footer {
     justify-content: center;
     align-items: center;
     margin: auto;
-    padding-top: 5vh;
+    padding-top: 18vh;
 }
 
 
