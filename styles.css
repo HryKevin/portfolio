@@ -529,12 +529,15 @@ footer {
         text-align: center;
         justify-content: center;
         align-content: center;
+
     }
 
     nav ul {
         display: flex;
         margin: 5px;
         flex-direction: column;
+        align-items: center;
+        padding-inline-start: 0px;
     }
 
     nav ul li {
@@ -903,7 +906,7 @@ footer {
 
 /* Contenu de la modal */
 .modal-content {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
@@ -911,6 +914,8 @@ footer {
     text-align: center;
     font-size: xx-large;
     align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .modal-content a {
