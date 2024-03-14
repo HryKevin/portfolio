@@ -774,7 +774,7 @@ footer {
     height: 20.75rem;
     padding: 2rem;
     transition: transform 250ms;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(51, 51, 51, 0.7);
     border-radius: 0.625rem;
     box-shadow: 0 0.3125rem 1.25rem rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -846,7 +846,7 @@ footer {
 .contact-form {
     padding: 20px;
     border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(51, 51, 51, 0.7);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 

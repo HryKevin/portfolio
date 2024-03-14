@@ -12,6 +12,31 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
     <title>One page - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+                publicKey: "KAMdZRiuY0XMIYm4F",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contactForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_we5rdwm', 'template_87918pa', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                        alert('Votre e-mail a été envoyé avec succès!');
+
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -45,19 +70,23 @@
             <div class="contact-content">
 
                 <section class="contact-section">
-                    <form class="contact-form" id="contactForm" action="#" method="POST">
+                    <form class="contact-form" id="contactForm">
+                        <!-- Ajout d'un champ caché pour le contact_number -->
+                        <input type="hidden" name="contact_number" value="697483">
+
                         <h2 class="text">Contactez - moi !</h2>
                         <label for="nom">Nom :</label>
-                        <input type="text" id="nom" name="nom" placeholder="Nom :" required>
+                        <input type="text" id="nom" name="user_name" placeholder="Nom :" required>
 
                         <label for="email">Email :</label>
-                        <input type="email" id="email" name="email" placeholder="Email :" required>
+                        <input type="email" id="email" name="user_email" placeholder="Email :" required>
 
                         <label for="message">Message :</label>
                         <textarea id="message" name="message" placeholder="Votre message ..."></textarea>
 
                         <input type="submit" value="Envoyer">
                     </form>
+
                 </section>
             </div>
             <footer class="container container-footer">
@@ -85,6 +114,7 @@
 
 
     <script src="main.js"></script>
+
 </body>
 
 </html>
