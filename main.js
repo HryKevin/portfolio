@@ -232,11 +232,15 @@ const closeBtn = document.getElementsByClassName("close")[0];
 // Ajout d'un écouteur d'événements sur le clic de l'icône "home"
 homeIcon.addEventListener("click", function () {
   modal.style.display = "block";
+  homeIcon.classList.add("transition"); // Ajouter la classe de transition
+  homeIcon.style.opacity = "0"; // Rendre le burger invisible
 });
 
 // Ajout d'un écouteur d'événements sur le clic du bouton de fermeture
 closeBtn.addEventListener("click", function () {
   modal.style.display = "none";
+  homeIcon.classList.remove("transition"); // Supprimer la classe de transition
+  homeIcon.style.opacity = "1"; // Rétablir la visibilité du burger
 });
 
 // Fermer la modal lorsque l'utilisateur clique en dehors de celle-ci

@@ -240,9 +240,7 @@ footer {
     transition: transform 0.65s ease-out;
 }
 
-.home:hover {
-    transform: scale(2) rotate(360deg);
-}
+
 
 /*-------------------------------------------TITLE AND LOGO-----------------------------------*/
 
@@ -253,9 +251,9 @@ footer {
     justify-content: space-around;
 }
 
-
-
-
+.transition {
+    transition: opacity 0.3s ease-in-out;
+}
 
 /* --------------------------------- MEDIA QUERY 768 PX-------------------------------------------*/
 
@@ -305,7 +303,7 @@ footer {
         padding-top: 2vh !important;
     }
 
-    .section-projet-content h1 {}
+
 
 
     .section-projet-content-card-group {
@@ -396,7 +394,6 @@ footer {
     .circle {
         width: 60px;
         height: 60px;
-        background: radial-gradient(rgba(176, 230, 51, 0.5), rgba(83, 239, 125, 0.5));
         border-radius: 50%;
         position: absolute;
         animation: move-up6 2s ease-in infinite alternate-reverse;
@@ -416,6 +413,7 @@ footer {
 
     #home-icon {
         display: flex;
+
     }
 
     nav {
@@ -516,6 +514,25 @@ footer {
         padding-bottom: 10vh !important;
     }
 
+    .nav-modal {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 80vh;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+    }
+
+    nav ul {
+        display: flex;
+        margin: 5px;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        padding: 20px;
+    }
 
 }
 
