@@ -66,6 +66,7 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
+    overflow-x: hidden;
 }
 
 
@@ -309,6 +310,10 @@ footer {
         padding-top: 2vh !important;
     }
 
+
+    .cv-content {
+        padding: 10px;
+    }
 
 
 
