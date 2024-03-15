@@ -249,3 +249,14 @@ window.addEventListener("click", function (event) {
     modal.style.display = "none";
   }
 });
+
+//////////////////////////////////////////////////////
+// POP UP SUCCESS MAIL
+
+function openPopup() {
+  document.getElementById("popup").style.display = "block";
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
