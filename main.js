@@ -255,8 +255,27 @@ window.addEventListener("click", function (event) {
 
 function openPopup() {
   document.getElementById("popup").style.display = "block";
+  document.querySelector("").addEventListener("click", closePopup);
 }
 
 function closePopup() {
   document.getElementById("popup").style.display = "none";
 }
+
+////////////////////////////////////////////////////////
+// LIEN CARD
+
+document.addEventListener("DOMContentLoaded", function () {
+  const clickableCards = document.querySelectorAll(
+    ".section-projet-content-card.clickable"
+  );
+
+  clickableCards.forEach(function (card) {
+    card.addEventListener("click", function () {
+      // Récupérer l'URL de redirection de la carte (si besoin)
+      const link = card.querySelector("a").getAttribute("href");
+      // Rediriger l'utilisateur vers l'URL de la carte
+      window.location.href = link;
+    });
+  });
+});

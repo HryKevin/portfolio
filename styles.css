@@ -4,12 +4,13 @@
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
+
 }
 
 body {
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 .container {
@@ -66,7 +67,9 @@ nav ul li a:hover {
     height: 100vh;
     flex-direction: column;
     justify-content: space-between;
-    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    /* ou auto */
+    overflow-x: hidden;
 
 }
 
@@ -212,7 +215,6 @@ footer {
     display: flex;
     justify-content: center;
     bottom: 0;
-    padding: 10px 0;
 }
 
 /*--------------------------------ICON SOCIAL MEDIA---------------------------------------------*/
@@ -296,10 +298,10 @@ footer {
     }
 
     .download-cv {
-        top: 0vh !important;
+        top: 0px !important;
         /* Position relative pour que les pseudo-éléments soient positionnés par rapport à cet élément */
 
-        left: 5vh !important;
+        left: 10px !important;
         position: relative !important;
     }
 
@@ -336,6 +338,10 @@ footer {
         text-align: center;
         align-items: center;
     }
+
+    .contact-content {
+        padding: 10px;
+    }
 }
 
 
@@ -349,9 +355,7 @@ footer {
         width: 378px;
     }
 
-    .container-hero {
-        height: 100%;
-    }
+
 
     .container-header {
         width: auto;
@@ -377,7 +381,7 @@ footer {
     }
 
     .about-content {
-        padding: 0px;
+        padding: 10px !important;
     }
 
     .container-about-content {
@@ -594,8 +598,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-
+    padding: 89px;
 }
 
 .container-about-content {
@@ -607,7 +610,6 @@ footer {
     flex-direction: column;
     text-align: left;
     font-size: larger;
-    margin: 30px;
     justify-content: center;
 
 }
@@ -625,7 +627,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    font-size: 0.8em;
 }
 
 .cv-content h5 {
@@ -695,7 +697,7 @@ footer {
     position: absolute;
     /* Position relative pour que les pseudo-éléments soient positionnés par rapport à cet élément */
     display: inline-block;
-    top: 50vh;
+    top: 50%;
 }
 
 .download-cv::after {
@@ -748,23 +750,23 @@ footer {
     display: flex;
     width: 80%;
     margin: 0 auto;
-    padding-top: 15vh;
 }
 
 .section-projet-content {
     margin: auto;
+    padding-top: 10px;
 }
 
 .section-projet-content h1 {
     text-align: center;
-    margin-top: 35px;
+
 }
 
 
 .section-projet-content-card-group {
     max-width: 78.75rem;
     display: flex;
-    padding: 3.125rem;
+    padding: 2px;
     margin: auto;
     justify-content: center;
     flex-wrap: wrap;
@@ -777,14 +779,16 @@ footer {
     height: 20.75rem;
     padding: 2rem;
     transition: transform 250ms;
-    background-color: rgba(51, 51, 51, 0.7);
+    background-color: rgb(27, 27, 27);
     border-radius: 0.625rem;
     box-shadow: 0 0.3125rem 1.25rem rgba(0, 0, 0, 0.1);
     text-align: center;
     align-items: center;
 }
 
-
+.section-projet-content-card.clickable {
+    cursor: pointer;
+}
 
 .section-projet-content-card:not(:first-child) {
     margin-left: -8.125rem;
@@ -816,6 +820,7 @@ footer {
     color: #b0e633;
     text-decoration: none;
     padding: auto;
+    display: none;
 
 }
 
@@ -837,7 +842,6 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
 }
 
 .contact-content h1 {
@@ -942,16 +946,22 @@ footer {
 /* --------------POPO UP MAIL SUCESSE ------------------*/
 
 
+
+
 .popup {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border: 2px solid black;
+    border-radius: 20px;
     z-index: 1000;
+    height: 50%;
+
+    margin: auto;
 }
 
 .popup-content {
