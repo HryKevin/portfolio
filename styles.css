@@ -386,9 +386,7 @@ footer {
 
     .container-about-content {
         margin: 0px !important;
-
         padding-bottom: 35px !important;
-        font-size: smaller !important;
     }
 
     .container-about-content h1 {
@@ -396,9 +394,6 @@ footer {
         padding: 0px;
     }
 
-    .container-hero h1 {
-        font-size: large;
-    }
 
     .home {
         display: block;
@@ -565,31 +560,7 @@ footer {
 
 
 
-@media screen and (max-width: 376px) {
-    .about-content h1 {
-        margin-bottom: 0vh !important;
-        ;
-    }
 
-
-    .container-about-content {
-        margin: 0px;
-
-        font-size: small !important;
-    }
-
-    .container-header+p {
-        font-size: large;
-        padding-top: 0vh !important;
-        margin: auto;
-    }
-
-
-    .contact-section {
-        padding-top: 2vh !important;
-        padding-bottom: 0vh !important;
-    }
-}
 
 /* ----------------------- ABOUT ----------------------- */
 
